@@ -1,0 +1,29 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+mqtt:
+  sensor:
+   - name: "Area 1 Humidity Sensor"
+     state_topic: "sensor1/humidity"
+     unit_of_measurement: "%"
+     device_class: "humidity"
+   - name: "Area 2 Humidity Sensor"
+     state_topic: "sensor2/humidity"
+     unit_of_measurement: "%"
+     device_class: "humidity"
+   - name: "Area 3 Humidity Sensor"
+     state_topic: "sensor3/humidity"
+     unit_of_measurement: "%"
+     device_class: "humidity"
+   - name: "Area 4 Humidity Sensor"
+     state_topic: "sensor4/humidity"
+     unit_of_measurement: "%"
+     device_class: "humidity"
